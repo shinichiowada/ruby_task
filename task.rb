@@ -6,6 +6,7 @@ def q1
 
   # 以下に回答を記載
   names << "斎藤"
+  p names
 end
 
 def q2
@@ -22,7 +23,7 @@ def q3
   array = ["1", "5", "8", "10", "2", "3", "2", "3", "3", "1", "4", "5", "9"]
 
   # 以下に回答を記載
-  p array.com("3")
+  p array.count("3");
 end
 
 def q4
