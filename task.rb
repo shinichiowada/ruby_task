@@ -29,7 +29,8 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  p sports.compact 
+  sports.compact!
+  p sports 
 end
 
 def q5
@@ -52,7 +53,8 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  p array.map(&:to_i)
+  array.map!(&:to_i)
+  p array
 end
 
 def q8
@@ -81,13 +83,8 @@ def q10
 
   # 以下に回答を記載
   foods.each do |food|
-    if food.include?("うに")
-      puts "好物です"
-    else
-      puts "まぁまぁ好きです"
-    end
+    puts food.include?("うに")? "「好物です」" : "「まぁまぁ好きです」"
   end
-
 end
 
 def q11
