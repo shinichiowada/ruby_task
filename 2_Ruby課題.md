@@ -181,7 +181,7 @@ class User
 
 # コードを追加
 
-end
+
 
 user1 = User.new(name: "神里", age: 32, gender: "男", admin: true)
 user2 = User.new(name: "あじー", age: 32, gender: "男", admin: false)

@@ -83,7 +83,7 @@ def q10
 
   # 以下に回答を記載
   foods.each do |food|
-    puts food.include?("うに")? "「好物です」" : "「まぁまぁ好きです」"
+    puts food.include?("うに") ? "「好物です」" : "「まぁまぁ好きです」"
   end
 end
 
@@ -144,7 +144,20 @@ end
 
 class UserQ17
   # 以下に回答を記載
-
+def initialize(name:,age:,gender:,admin:)
+    @name = name
+    @age = age
+    @gender = gender
+    @admin = admin
+  end
+  def info
+    puts <<~TEXT
+    名前:#{@name}
+    年齢:#{@age}
+    性別:#{@gender}
+    TEXT
+    puts @admin ? "管理者権限:有り" : "管理者権限:無し"
+  end
 end
 
 def q17
