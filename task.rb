@@ -144,19 +144,18 @@ end
 
 class UserQ17
   # 以下に回答を記載
-def initialize(name:,age:,gender:,admin:)
-    @name = name
-    @age = age
-    @gender = gender
-    @admin = admin
+def initialize(**user)
+    @name = user[:name]
+    @age = user[:age]
+    @gender = user[:gender]
+    @admin = user[:admin]
   end
   def info
-    puts <<~TEXT
-    名前:#{@name}
-    年齢:#{@age}
-    性別:#{@gender}
-    TEXT
-    puts @admin ? "管理者権限:有り" : "管理者権限:無し"
+    admin = @admin ? "有り" : "無し"
+    puts "名前:#{@name}"
+    puts "年齢:#{@age}"
+    puts "性別:#{@gender}"
+    puts "管理者権限:#{admin}"
   end
 end
 
@@ -172,7 +171,18 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(**user)
+    @name = user[:name]
+    @age = user[:age]
+  end
 
+  def introduce
+    if @age > 11
+     puts "こんにちは, #{@name}と申します。宜しくお願いいたします。"
+    else
+     puts "はいさいまいど〜, #{@name}です！！！"
+    end
+  end
 end
 
 def q18
@@ -186,11 +196,16 @@ end
 
 class Item
   # 以下を修正して下さい
-
-  def initialize(name)
-    @name = name
+  def initialize(**book)
+    @name = book[:name]
   end
+
+  def name
+    puts "#{@name}"
+  end
+
 end
+  
 
 def q19
   # ここは変更しないで下さい
